@@ -45,3 +45,20 @@ footer {
     font-size: 12px;
     padding: 20px;
 }
+
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
