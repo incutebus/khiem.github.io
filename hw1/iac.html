@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure as Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>DevSecOps Basics</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="identity.html">Identity</a>
+            <a href="pipeline.html">CI/CD Security</a>
+            <a href="iac.html">Infrastructure as Code</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>What Is Infrastructure as Code?</h2>
+
+        <p>
+            Infrastructure as Code (IaC) allows
+            engineers to create and manage cloud
+            resources using configuration files
+            instead of manually setting up
+            everything through a web portal.
+        </p>
+
+        <figure>
+            <svg viewBox="0 0 520 160" role="img"
+                 aria-label="Terraform configuration checked before cloud deployment">
+                <rect x="15" y="20" width="140" height="110"
+                      rx="6" fill="#e3eafa" stroke="#3975ad"
+                      stroke-width="2"/>
+                <text x="85" y="55" text-anchor="middle"
+                      font-size="18" fill="#234b74">main.tf</text>
+                <g stroke="#3975ad" stroke-width="3">
+                    <line x1="40" y1="75" x2="125" y2="75"/>
+                    <line x1="40" y1="90" x2="105" y2="90"/>
+                    <line x1="40" y1="105" x2="115" y2="105"/>
+                </g>
+
+                <rect x="205" y="40" width="115" height="70"
+                      rx="6" fill="#39865e"/>
+                <text x="262" y="80" text-anchor="middle"
+                      font-size="18" fill="white">Checkov</text>
+
+                <rect x="365" y="40" width="140" height="70"
+                      rx="6" fill="#3975ad"/>
+                <text x="435" y="80" text-anchor="middle"
+                      font-size="18" fill="white">Cloud</text>
+
+                <g fill="#333" font-size="24">
+                    <text x="170" y="85">→</text>
+                    <text x="335" y="85">→</text>
+                </g>
+            </svg>
+            <figcaption>Checking infrastructure code before deployment</figcaption>
+        </figure>
+
+        <h2>Terraform</h2>
+
+        <p>
+            Terraform is a popular IaC tool.
+            Engineers write configuration files
+            that describe resources such as
+            virtual machines, networks, and storage.
+        </p>
+
+        <p>
+            Terraform uses a plan to show proposed
+            infrastructure changes before they
+            are applied.
+        </p>
+
+        <h2>Policy as Code</h2>
+
+        <p>
+            Policy as Code uses automated rules
+            to check infrastructure configurations.
+            For example, a security policy might
+            identify a storage account that allows
+            public access.
+        </p>
+
+        <h3>Examples of Security Checks</h3>
+
+        <ul>
+            <li>Check for public network access</li>
+            <li>Require encryption settings</li>
+            <li>Review resource permissions</li>
+            <li>Identify insecure configurations</li>
+        </ul>
+
+        <h2>Using Checkov</h2>
+
+        <p>
+            Checkov is a tool that scans IaC files
+            for security problems. It supports
+            Terraform and other configuration
+            formats. It can be added to CI/CD
+            pipelines to identify issues before
+            infrastructure is deployed.
+        </p>
+
+        <h3>Sources</h3>
+        <ul>
+            <li>
+                <a href="https://developer.hashicorp.com/terraform/intro">
+                    HashiCorp - Terraform
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/bridgecrewio/checkov">
+                    Checkov - GitHub
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>CST336 - Homework 1</p>
+    </footer>
+</body>
+</html>
