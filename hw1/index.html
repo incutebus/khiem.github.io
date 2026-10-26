@@ -4,68 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Security Basics</title>
+    <title>DevSecOps Basics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>Cloud Security Basics</h1>
+        <h1>DevSecOps Basics</h1>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="identity.html">Identity</a>
-            <a href="network.html">Networking</a>
-            <a href="automation.html">Automation</a>
+            <a href="pipeline.html">CI/CD Security</a>
+            <a href="iac.html">Infrastructure as Code</a>
         </nav>
     </header>
 
     <main>
-        <h2>What Is Cloud Computing?</h2>
+        <h2>What Is DevSecOps?</h2>
 
         <p>
-            Cloud computing allows people and businesses to use
-            servers, storage, and software over the internet.
-            Companies like Microsoft Azure and AWS provide
-            these services.
+            DevSecOps stands for Development, Security,
+            and Operations. It combines software development
+            with security practices to build and deploy
+            applications safely.
         </p>
 
-        <img src="images/overview.svg"
-             alt="Cloud computing diagram"
+        <img src="images/devsecops.svg"
+             alt="DevSecOps process diagram"
              width="400">
 
-        <h2>Why Use Cloud Computing?</h2>
+        <h2>Why Is DevSecOps Important?</h2>
 
         <p>
-            Cloud computing makes it easier for businesses
-            to manage their applications and data without
-            owning physical servers.
+            Traditionally, security checks happened near
+            the end of software development. DevSecOps
+            introduces security earlier in the process
+            to help identify problems before deployment.
         </p>
 
-        <h3>Benefits of Cloud Computing</h3>
+        <h3>Common DevSecOps Practices</h3>
 
         <ul>
-            <li>Lower hardware costs</li>
-            <li>Easy to increase resources</li>
-            <li>Access services from anywhere</li>
-            <li>Better flexibility</li>
+            <li>Automated security scanning</li>
+            <li>Secure CI/CD pipelines</li>
+            <li>Identity and access management</li>
+            <li>Infrastructure as Code (IaC)</li>
+            <li>Continuous security monitoring</li>
         </ul>
 
-        <h2>Cloud Security</h2>
+        <h2>DevSecOps Tools</h2>
 
         <p>
-            Cloud security is important because companies
-            store sensitive information in the cloud.
-            Three major areas of security are identity,
-            networking, and automation.
+            Common tools include GitHub Actions,
+            Azure DevOps, Terraform, and Checkov.
+            These tools can help automate deployments
+            and check for security issues.
         </p>
 
         <details>
-            <summary>What is cloud security?</summary>
+            <summary>What does Shift Left mean?</summary>
             <p>
-                Cloud security involves protecting cloud
-                systems, applications, and data from
-                unauthorized access.
+                Shift Left means adding security checks
+                earlier in development instead of waiting
+                until the application is ready for release.
             </p>
         </details>
 
@@ -73,13 +75,13 @@
 
         <ul>
             <li>
-                <a href="https://csrc.nist.gov/pubs/sp/800/145/final">
-                    NIST - Cloud Computing
+                <a href="https://learn.microsoft.com/en-us/devops/operate/security-in-devops">
+                    Microsoft - DevSecOps
                 </a>
             </li>
             <li>
-                <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">
-                    Microsoft - Cloud Security
+                <a href="https://csrc.nist.gov/pubs/sp/800/218/final">
+                    NIST - Secure Software Development
                 </a>
             </li>
         </ul>
