@@ -14,8 +14,9 @@ header {
     padding: 20px;
 }
 
-header h1 {
+h1 {
     margin: 0 0 15px 0;
+    font-size: 30px;
 }
 
 nav a {
@@ -23,22 +24,24 @@ nav a {
     text-decoration: none;
     margin: 10px;
     padding: 5px;
+    display: inline-block;
 }
 
 nav a:hover {
-    text-decoration: underline;
     background-color: #376d9e;
+    text-decoration: underline;
 }
 
 main {
     background-color: white;
-    width: 80%;
+    width: 85%;
     max-width: 900px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px #ddd;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -51,15 +54,27 @@ h3 {
     color: #376d9e;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-}
-
 li {
     margin-bottom: 5px;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: auto;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
 }
 
 details {
@@ -74,6 +89,19 @@ summary {
     font-weight: bold;
 }
 
+/* Two columns on the CI/CD page */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.two-columns section {
+    background-color: #eef4fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
 footer {
     background-color: #234b74;
     color: white;
@@ -82,17 +110,11 @@ footer {
     margin-top: 20px;
 }
 
-/* Two-column layout for the networking page */
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
+/* Smaller screens */
 @media (max-width: 600px) {
     main {
-        width: auto;
-        margin: 10px;
+        width: 95%;
+        padding: 15px;
     }
 
     .two-columns {
