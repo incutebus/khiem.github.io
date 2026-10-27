@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,6 @@
 <body>
     <header>
         <h1>DevSecOps Basics</h1>
-
         <nav>
             <a href="index.html">Home</a>
             <a href="identity.html">Identity</a>
@@ -22,87 +20,66 @@
 
     <main>
         <h2>What Is CI/CD?</h2>
-
         <p>
-            CI/CD stands for Continuous Integration
-            and Continuous Delivery or Deployment.
-            It allows developers to automatically
-            build, test, and release applications.
+            CI/CD stands for Continuous Integration and Continuous
+            Delivery. Every time a developer pushes code, a pipeline
+            builds it, tests it, and can release it automatically.
         </p>
 
         <figure>
-            <svg viewBox="0 0 560 120" role="img"
-                 aria-label="CI/CD pipeline from code to deployment">
-                <rect x="10" y="30" width="115" height="60"
-                      rx="5" fill="#3975ad"/>
-                <rect x="150" y="30" width="115" height="60"
-                      rx="5" fill="#d18a36"/>
-                <rect x="290" y="30" width="115" height="60"
-                      rx="5" fill="#39865e"/>
-                <rect x="430" y="30" width="115" height="60"
-                      rx="5" fill="#9266a8"/>
-                <g fill="white" font-size="17" text-anchor="middle">
-                    <text x="67" y="65">Code</text>
-                    <text x="207" y="65">Scan</text>
-                    <text x="347" y="65">Test</text>
-                    <text x="487" y="65">Deploy</text>
-                </g>
+            <svg viewBox="0 0 520 100" role="img" aria-label="Pipeline steps: code, scan, test, deploy">
+                <rect x="5" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+                <rect x="140" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+                <rect x="275" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+                <rect x="410" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+                <text x="55" y="56" text-anchor="middle" font-size="16">Code</text>
+                <text x="190" y="56" text-anchor="middle" font-size="16">Scan</text>
+                <text x="325" y="56" text-anchor="middle" font-size="16">Test</text>
+                <text x="460" y="56" text-anchor="middle" font-size="16">Deploy</text>
+                <line x1="105" y1="50" x2="140" y2="50" stroke="black" stroke-width="2"/>
+                <line x1="240" y1="50" x2="275" y2="50" stroke="black" stroke-width="2"/>
+                <line x1="375" y1="50" x2="410" y2="50" stroke="black" stroke-width="2"/>
             </svg>
-            <figcaption>A basic CI/CD pipeline</figcaption>
+            <figcaption>A basic pipeline with a security scan step</figcaption>
         </figure>
 
         <h2>Securing the Pipeline</h2>
-
         <p>
-            Security checks can be added to CI/CD
-            pipelines to detect problems before
-            applications reach production.
+            Adding security checks to the pipeline means problems are
+            caught automatically before code reaches production.
         </p>
 
         <div class="two-columns">
             <section>
                 <h3>Before Deployment</h3>
                 <ul>
-                    <li>Scan application code</li>
-                    <li>Check dependencies</li>
-                    <li>Scan for exposed secrets</li>
-                    <li>Review code changes</li>
+                    <li>Scan the code for bugs</li>
+                    <li>Check libraries for known issues</li>
+                    <li>Look for passwords left in code</li>
                 </ul>
             </section>
 
             <section>
                 <h3>During Deployment</h3>
                 <ul>
-                    <li>Require approvals</li>
-                    <li>Use secure credentials</li>
-                    <li>Limit pipeline permissions</li>
-                    <li>Monitor deployment results</li>
+                    <li>Require approval to release</li>
+                    <li>Store credentials as secrets</li>
+                    <li>Limit what the pipeline can access</li>
                 </ul>
             </section>
         </div>
 
         <h2>Common Tools</h2>
-
         <p>
-            Azure DevOps and GitHub Actions can
-            automate builds and deployments.
-            Security tools can be integrated into
-            these pipelines to check code,
-            dependencies, and configurations.
+            GitHub Actions and Azure DevOps are two popular tools for
+            building pipelines. Security scanners can be added to
+            either one as extra steps.
         </p>
 
-        <h3>Sources</h3>
+        <h2>Sources</h2>
         <ul>
-            <li>
-                <a href="https://learn.microsoft.com/en-us/devops/operate/security-in-devops">
-                    Microsoft - Security in DevOps
-                </a>
-            </li>
-            <li>
-                <a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets">
-                    GitHub - Using Secrets in Actions
-                </a>
-            </li>
+            <li><a href="https://learn.microsoft.com/en-us/devops/operate/security-in-devops">Microsoft - Security in DevOps</a></li>
+            <li><a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets">GitHub - Using Secrets in Actions</a></li>
         </ul>
     </main>
 
