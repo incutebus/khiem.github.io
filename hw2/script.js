@@ -1,3 +1,8 @@
+//Khiem Vo
+//CST336
+//Professor Lara
+//Lab 2
+
 //Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", checkGuess);
 document.querySelector("#resetBtn").addEventListener("click", initializeGame);
