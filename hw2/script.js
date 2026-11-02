@@ -43,11 +43,11 @@ function initializeGame() {
 function checkGuess() {
     let feedback = document.querySelector("#feedback");
     feedback.textContent = "";
-    let guess = Number(document.querySelector("#playerGuess").value);
+    let guess = document.querySelector("#playerGuess").value;
     console.log("Player guess: " + guess);
 
     //only accepting whole numbers from 1 to 99
-    if (!Number.isInteger(guess) || guess < 1 || guess > 99) {
+    if (guess < 1 || guess > 99 || guess != Math.floor(guess)) {
         feedback.textContent = "Enter a number between 1 and 99";
         feedback.style.color = "red";
         return;
