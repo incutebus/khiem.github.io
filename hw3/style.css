@@ -1,0 +1,83 @@
+/*
+    Khiem Vo
+    CST336
+    Professor Lara
+    HW2
+*/
+
+body {
+    background-color: #f1f6fa;
+    color: #243746;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    border-bottom: 3px solid #2594b1;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    max-width: 850px;
+}
+
+.question {
+    background-color: white;
+    border: 1px solid #d6e2eb;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.question h2 {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.question label {
+    margin-bottom: 4px;
+}
+
+.question .form-control,
+.question .form-select {
+    max-width: 450px;
+}
+
+.form-check {
+    margin-bottom: 5px;
+}
+
+.mark img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.feedback {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.results {
+    background-color: white;
+    border: 1px solid #d6e2eb;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+#totalAttempts {
+    font-size: 1rem;
+    color: #505b64;
+}
+
+footer {
+    color: #586772;
+}
