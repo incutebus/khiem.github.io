@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+  Khiem Vo
+  CST336
+  Professor Lara
+  API Lab
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rick and Morty Character Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Rick and Morty Character Finder</h1>
+  <p>Search for characters by name, species, and status.</p>
+</header>
+
+<main>
+<form id="searchForm">
+  <div class="field">
+    <label for="name">Character Name:</label>
+    <input type="text" id="name" placeholder="e.g. Rick, Morty, Summer">
+    <span id="nameError"></span>
+  </div>
+
+  <div class="field">
+    <label for="species">Species:</label>
+    <select id="species">
+      <option value="">Any</option>
+      <option value="Human">Human</option>
+      <option value="Alien">Alien</option>
+      <option value="Humanoid">Humanoid</option>
+      <option value="Robot">Robot</option>
+      <option value="Animal">Animal</option>
+      <option value="Cronenberg">Cronenberg</option>
+      <option value="unknown">Unknown</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="status">Status:</label>
+    <select id="status">
+      <option value="">Any</option>
+      <option value="alive">Alive</option>
+      <option value="dead">Dead</option>
+      <option value="unknown">Unknown</option>
+    </select>
+  </div>
+
+  <button type="submit">Search</button>
+</form>
+
+<p id="message"></p>
+
+<div id="results"></div>
+
+<div id="pager">
+  <button id="prevBtn">Previous</button>
+  <span id="pageInfo"></span>
+  <button id="nextBtn">Next</button>
+</div>
+</main>
+
+<footer>
+  Khiem Vo - CST336 - Professor Lara - API Lab<br>
+  Data from the <a href="https://rickandmortyapi.com/">Rick and Morty API</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
