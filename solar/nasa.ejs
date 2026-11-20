@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<section class="panel">
+  <h2>NASA Picture of the Day</h2>
+
+  <% if (apod) { %>
+    <h3><%= apod.title %></h3>
+    <p class="small"><%= apod.date %><% if (apod.copyright) { %> &middot; &copy; <%= apod.copyright %><% } %></p>
+
+    <% if (apod.media_type == "video") { %>
+      <div class="ratio ratio-16x9 mb-3">
+        <iframe src="<%= apod.url %>" title="<%= apod.title %>" allowfullscreen></iframe>
+      </div>
+    <% } else { %>
+      <img class="apod-img" src="<%= apod.url %>" alt="<%= apod.title %>">
+    <% } %>
+
+    <p><%= apod.explanation %></p>
+  <% } else { %>
+    <p>Sorry, NASA's Picture of the Day for <%= today %> is not available right now. Please try again later,
+      or view it directly at <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">apod.nasa.gov</a>.</p>
+  <% } %>
+</section>
+
+<%- include('partials/footer.ejs') %>
