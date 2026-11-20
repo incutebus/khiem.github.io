@@ -1,10 +1,16 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import path from 'path';
+import { fileURLToPath } from 'url';
 const planets = (await import('npm-solarsystem')).default;
+
+// folder that contains this file, so views/ and public/ are found no matter where node is started from
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 
 const UNSPLASH_KEY = process.env.UNSPLASH_KEY || "7756a1e81f817c186cf57294e1c19b37b49c54b8f34e7c499ee0ce5cd86cd16e";
 const NASA_KEY = process.env.NASA_KEY || "9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
