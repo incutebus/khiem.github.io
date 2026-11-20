@@ -1,0 +1,78 @@
+<%- include('partials/header.ejs') %>
+
+    <h2>Identity and Access Management</h2>
+    <p>
+        Identity and Access Management (IAM) decides who can use an
+        application or cloud resource and what they can do with it.
+    </p>
+
+    <figure>
+        <svg viewBox="0 0 500 130" role="img" aria-label="A user passes an identity check before reaching the cloud">
+            <circle cx="70" cy="40" r="20" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="40" y="65" width="60" height="40" rx="20" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="215" y="55" width="70" height="55" fill="white" stroke="black" stroke-width="2"/>
+            <path d="M230 55 V40 a20 20 0 0 1 40 0 V55" fill="none" stroke="black" stroke-width="2"/>
+            <rect x="380" y="45" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <text x="430" y="76" text-anchor="middle" font-size="16">Cloud</text>
+            <line x1="115" y1="80" x2="200" y2="80" stroke="black" stroke-width="2"/>
+            <line x1="300" y1="80" x2="370" y2="80" stroke="black" stroke-width="2"/>
+        </svg>
+        <figcaption>A user must be verified before reaching cloud resources</figcaption>
+    </figure>
+
+    <h2>Authentication vs. Authorization</h2>
+    <p>
+        Authentication checks who you are, for example with a
+        password and a code from your phone. Authorization checks
+        what you are allowed to do after you sign in.
+    </p>
+
+    <h2>Common Security Controls</h2>
+    <ul>
+        <li>Multi-factor authentication (MFA)</li>
+        <li>Role-based access control (RBAC)</li>
+        <li>Least privilege: only give the access that is needed</li>
+    </ul>
+
+    <h2>Managed Identities and Secrets</h2>
+    <p>
+        Applications need identities too. In Azure, a managed
+        identity lets a resource sign in to other services without
+        a password stored in the code. Other secrets, like API keys,
+        should be kept in a service such as Azure Key Vault.
+    </p>
+
+    <h2>Sample Access Review</h2>
+    <p>
+        An access review checks who has access and whether they still need it.
+        These users are made-up data from the Faker package, and they change
+        every time the page loads.
+    </p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>MFA</th>
+            <th>Last Sign-in</th>
+        </tr>
+        <% users.forEach(function (user) { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.username %></td>
+                <td><%= user.email %></td>
+                <td><%= user.role %></td>
+                <td class="<%= user.mfa ? 'supported' : 'eol' %>"><%= user.mfa ? "On" : "Off" %></td>
+                <td><%= user.lastSignIn %></td>
+            </tr>
+        <% }); %>
+    </table>
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/">Microsoft - Managed Identities</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/overview">Microsoft - Azure RBAC</a></li>
+    </ul>
+
+<%- include('partials/footer.ejs') %>

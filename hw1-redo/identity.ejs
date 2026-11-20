@@ -1,0 +1,55 @@
+<%- include('partials/header.ejs') %>
+
+    <h2>What Is DevSecOps?</h2>
+    <p>
+        DevSecOps stands for Development, Security, and Operations.
+        It is a way of building software where security is part of
+        every step, not something added at the end.
+    </p>
+
+    <figure>
+        <svg viewBox="0 0 500 110" role="img" aria-label="Dev, Sec and Ops working together">
+            <rect x="10" y="25" width="130" height="60" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="185" y="25" width="130" height="60" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="360" y="25" width="130" height="60" fill="white" stroke="black" stroke-width="2"/>
+            <text x="75" y="61" text-anchor="middle" font-size="18">Dev</text>
+            <text x="250" y="61" text-anchor="middle" font-size="18">Sec</text>
+            <text x="425" y="61" text-anchor="middle" font-size="18">Ops</text>
+            <text x="162" y="62" text-anchor="middle" font-size="22">+</text>
+            <text x="337" y="62" text-anchor="middle" font-size="22">+</text>
+        </svg>
+        <figcaption>Development, security and operations working together</figcaption>
+    </figure>
+
+    <h2>Why It Matters</h2>
+    <p>
+        In the past, security testing often happened right before
+        release, so problems were found late and were expensive to
+        fix. DevSecOps catches problems earlier, when they are
+        easier and cheaper to fix.
+    </p>
+
+    <h2>Common Practices</h2>
+    <ul>
+        <li>Automated security scanning</li>
+        <li>Secure CI/CD pipelines</li>
+        <li>Identity and access management</li>
+        <li>Infrastructure as Code (IaC)</li>
+    </ul>
+
+    <details>
+        <summary>What does "Shift Left" mean?</summary>
+        <p>
+            If you picture development as a timeline from left to
+            right, "Shift Left" means moving security checks earlier
+            in that timeline.
+        </p>
+    </details>
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="https://learn.microsoft.com/en-us/devops/operate/security-in-devops">Microsoft - Security in DevOps</a></li>
+        <li><a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST - Secure Software Development Framework</a></li>
+    </ul>
+
+<%- include('partials/footer.ejs') %>

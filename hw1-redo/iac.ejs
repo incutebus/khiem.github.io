@@ -1,0 +1,66 @@
+<%- include('partials/header.ejs') %>
+
+    <h2>What Is CI/CD?</h2>
+    <p>
+        CI/CD stands for Continuous Integration and Continuous
+        Delivery. Every time a developer pushes code, a pipeline
+        builds it, tests it, and can release it automatically.
+    </p>
+
+    <figure>
+        <svg viewBox="0 0 520 100" role="img" aria-label="Pipeline steps: code, scan, test, deploy">
+            <rect x="5" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="140" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="275" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="410" y="25" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <text x="55" y="56" text-anchor="middle" font-size="16">Code</text>
+            <text x="190" y="56" text-anchor="middle" font-size="16">Scan</text>
+            <text x="325" y="56" text-anchor="middle" font-size="16">Test</text>
+            <text x="460" y="56" text-anchor="middle" font-size="16">Deploy</text>
+            <line x1="105" y1="50" x2="140" y2="50" stroke="black" stroke-width="2"/>
+            <line x1="240" y1="50" x2="275" y2="50" stroke="black" stroke-width="2"/>
+            <line x1="375" y1="50" x2="410" y2="50" stroke="black" stroke-width="2"/>
+        </svg>
+        <figcaption>A basic pipeline with a security scan step</figcaption>
+    </figure>
+
+    <h2>Securing the Pipeline</h2>
+    <p>
+        Adding security checks to the pipeline means problems are
+        caught automatically before code reaches production.
+    </p>
+
+    <div class="two-columns">
+        <section>
+            <h3>Before Deployment</h3>
+            <ul>
+                <li>Scan the code for bugs</li>
+                <li>Check libraries for known issues</li>
+                <li>Look for passwords left in code</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>During Deployment</h3>
+            <ul>
+                <li>Require approval to release</li>
+                <li>Store credentials as secrets</li>
+                <li>Limit what the pipeline can access</li>
+            </ul>
+        </section>
+    </div>
+
+    <h2>Common Tools</h2>
+    <p>
+        GitHub Actions and Azure DevOps are two popular tools for
+        building pipelines. Security scanners can be added to
+        either one as extra steps.
+    </p>
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="https://learn.microsoft.com/en-us/devops/operate/security-in-devops">Microsoft - Security in DevOps</a></li>
+        <li><a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets">GitHub - Using Secrets in Actions</a></li>
+    </ul>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+
+    <h2>Supported Versions</h2>
+    <p>
+        Software that has reached its end of life (EOL) no longer gets
+        security updates, so any new vulnerability stays open forever.
+        Checking which versions are still supported is an easy DevSecOps habit.
+    </p>
+
+    <p>
+        Choose a product:
+        <% products.forEach(function (p) { %>
+            <a href="/versions?product=<%= p %>"><%= p %></a>
+        <% }); %>
+    </p>
+
+    <h3><%= product %></h3>
+
+    <% if (releases.length > 0) { %>
+        <table>
+            <tr>
+                <th>Version</th>
+                <th>Released</th>
+                <th>Latest</th>
+                <th>End of Life</th>
+                <th>Status</th>
+            </tr>
+            <% releases.forEach(function (r) { %>
+                <tr>
+                    <td><%= r.label %></td>
+                    <td><%= r.releaseDate %></td>
+                    <td><%= r.latest ? r.latest.name : "" %></td>
+                    <td><%= r.eolFrom || "Not set" %></td>
+                    <td class="<%= r.isEol ? 'eol' : 'supported' %>"><%= r.isEol ? "End of life" : "Supported" %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>Sorry, the version data could not be loaded right now. Please try again later.</p>
+    <% } %>
+
+    <p><small>Data from the <a href="https://endoflife.date">endoflife.date</a> API.</small></p>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,59 @@
+<%- include('partials/header.ejs') %>
+
+    <h2>What Is Infrastructure as Code?</h2>
+    <p>
+        Infrastructure as Code (IaC) means setting up servers,
+        networks, and storage by writing configuration files instead
+        of clicking through a website. The files can be saved,
+        reviewed, and reused like any other code.
+    </p>
+
+    <figure>
+        <svg viewBox="0 0 500 140" role="img" aria-label="A Terraform file is checked by Checkov before going to the cloud">
+            <rect x="10" y="20" width="120" height="100" fill="white" stroke="black" stroke-width="2"/>
+            <text x="70" y="45" text-anchor="middle" font-size="15">main.tf</text>
+            <line x1="30" y1="65" x2="110" y2="65" stroke="black" stroke-width="2"/>
+            <line x1="30" y1="80" x2="95" y2="80" stroke="black" stroke-width="2"/>
+            <line x1="30" y1="95" x2="105" y2="95" stroke="black" stroke-width="2"/>
+            <rect x="190" y="45" width="110" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <text x="245" y="76" text-anchor="middle" font-size="16">Checkov</text>
+            <rect x="370" y="45" width="110" height="50" fill="white" stroke="black" stroke-width="2"/>
+            <text x="425" y="76" text-anchor="middle" font-size="16">Cloud</text>
+            <line x1="130" y1="70" x2="190" y2="70" stroke="black" stroke-width="2"/>
+            <line x1="300" y1="70" x2="370" y2="70" stroke="black" stroke-width="2"/>
+        </svg>
+        <figcaption>Checking a configuration file before it is deployed</figcaption>
+    </figure>
+
+    <h2>Terraform</h2>
+    <p>
+        Terraform is a common IaC tool. You describe what you want
+        in a file, and Terraform shows a plan of the changes before
+        it creates anything.
+    </p>
+
+    <h2>Policy as Code</h2>
+    <p>
+        Policy as Code uses automatic rules to check these files for
+        unsafe settings, such as:
+    </p>
+    <ul>
+        <li>Storage that anyone on the internet can read</li>
+        <li>Missing encryption</li>
+        <li>Permissions that are too broad</li>
+    </ul>
+
+    <h2>Checkov</h2>
+    <p>
+        Checkov is a free tool that scans Terraform and other
+        configuration files for problems like these. It can run in a
+        CI/CD pipeline so issues are found before deployment.
+    </p>
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="https://developer.hashicorp.com/terraform/intro">HashiCorp - What Is Terraform?</a></li>
+        <li><a href="https://github.com/bridgecrewio/checkov">Checkov on GitHub</a></li>
+    </ul>
+
+<%- include('partials/footer.ejs') %>
